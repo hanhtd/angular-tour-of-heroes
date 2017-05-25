@@ -18,4 +18,10 @@ export class HeroService {
             }
         );
     }
+    getHero(id: number): Promise<Hero> {
+        // TODO: Overview about typescript
+        // TODO: Promise in tyepscript
+        // TODO: Arrow operator in typescript
+        return this.getHeroes().then(heroes => heroes.find(hero => hero.id === id));
+    }
 }

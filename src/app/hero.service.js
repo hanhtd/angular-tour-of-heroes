@@ -24,6 +24,12 @@ var HeroService = (function () {
             setTimeout(function () { return resolve(_this.getHeroes()); }, 2000);
         });
     };
+    HeroService.prototype.getHero = function (id) {
+        // TODO: Overview about typescript
+        // TODO: Promise in tyepscript
+        // TODO: Arrow operator in typescript
+        return this.getHeroes().then(function (heroes) { return heroes.find(function (hero) { return hero.id === id; }); });
+    };
     return HeroService;
 }());
 HeroService = __decorate([
